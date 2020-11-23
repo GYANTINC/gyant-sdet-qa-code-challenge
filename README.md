@@ -12,8 +12,17 @@ As you can observe, there is no automated test or validation of any kind in this
 
 # Assignment
 
-Define and implement the tests of the types and levels you consider useful/necessary to help us validate the correctness of this piece of software. The choice of the testing techniques and instruments to employ is also yours (you should naturally take the tech stack of the existing codebase into account).
+## Goal
+Define and implement the tests of the types and levels you consider useful/necessary to help us validate the correctness of this piece of software (at a minimum, both unit and integration tests should be delivered). 
 
-All the written/implemented tests and validations should be portable (i.e. automatically executable on a local machine, a server, a CI/CD platform, etc.).
+The choice of the testing techniques and instruments to employ is also yours (you should naturally take the tech stack of the existing codebase into account). Keep in mind that all the written/implemented tests and validations should be portable (i.e. automatically executable on a local machine, a server, a CI/CD platform, etc.).
 
 If you wish to, you can suggest or even implement small refactors/tweaks to make the source code more testable. The same is valid for all the bugs you may find.
+
+## Delivery format
+
+1. Mirror the contents of this project to a personal private repository (do not fork this one, as your work will be readable by all other candidates).
+
+2. Perform all the changes of your choice to reach the goal of the assignment.
+
+3. Once you have finished working on it, reply to the challenge presentation e-mail you received (the one with the link to this repository) and include the result of your work in attachment.

@@ -12,8 +12,38 @@ As you can observe, there is no automated test or validation of any kind in this
 
 # Assignment
 
+## How to Run
+Note: Our suggestion is to use MongoDB Atlas cloud service. 
+
+Steps for Atlas Instance:
+1. Create a Shared Cluster
+2. Add a user
+3. Give permissions to access from anywhere
+
+Steps for [Installation](https://github.com/GYANTINC/gyant-sdet-qa-code-challenge/wiki/Installation)
+
+
+## API 
+We have two endpoints to import the data to our collections. Check the list with all the endpoints below.
+
+### API endpoints:
+- /cases
+    - GET /unreviewed/:userId
+    - POST /import
+    - PUT /review
+    - DELETE /
+
+- /conditions
+    - GET /
+    - POST /
+    - POST /import
+    
+- /users
+    - POST /login
+    - POST /register
+
 ## Goal
-Define and implement the tests of the types and levels you consider useful/necessary to help us validate the correctness of this piece of software (at a minimum, both unit and integration tests should be delivered). 
+Define and implement the tests of the types and levels you consider useful/necessary to help us validate the correctness of this piece of software (at a minimum, both integration and e2e tests should be delivered).
 
 The choice of the testing techniques and instruments to employ is also yours (you should naturally take the tech stack of the existing codebase into account). Keep in mind that all the written/implemented tests and validations should be portable (i.e. automatically executable on a local machine, a server, a CI/CD platform, etc.).
 

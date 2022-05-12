@@ -6,7 +6,8 @@
   "main": "./server/index.js",
   "scripts": {
     "start": "node -r esm server",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "swagger-autogen": "node swagger.js"
   },
   "dependencies": {
     "@hapi/boom": "^10.0.0",
@@ -19,7 +20,9 @@
     "koa-static": "^5.0.0",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.7",
-    "neat-csv": "^5.2.0"
+    "neat-csv": "^5.2.0",
+    "swagger-autogen": "^2.21.1",
+    "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
     "@moxy/eslint-config-base": "^12.0.0",

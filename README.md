@@ -12,6 +12,16 @@ As you can observe, there is no automated test or validation of any kind in this
 
 # Assignment
 
+## How to Run With Docker
+### To Start 
+```bash
+$ ./start-app.sh
+```
+### To Stop
+```bash
+$ docker-compose down
+```
+
 ## How to Run
 Note: Our suggestion is to use MongoDB Atlas cloud service. 
 

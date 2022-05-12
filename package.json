@@ -9,13 +9,13 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@hapi/boom": "^9.1.0",
-    "bcrypt": "^4.0.1",
-    "dotenv": "^8.2.0",
+    "@hapi/boom": "^10.0.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
     "esm": "^3.2.25",
-    "koa": "^2.11.0",
+    "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
-    "koa-router": "^8.0.8",
+    "koa-router": "^10.1.1",
     "koa-static": "^5.0.0",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.7",

@@ -2,7 +2,7 @@
   "name": "gyant-crud",
   "version": "1.0.0",
   "description": "gyant crud challenge",
-  "author": "paulobmarcos",
+  "author": "sdet-team",
   "main": "./server/index.js",
   "scripts": {
     "start": "node -r esm server",
@@ -14,6 +14,7 @@
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
     "esm": "^3.2.25",
+    "express": "^4.18.1",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.1.1",

@@ -7,6 +7,12 @@ import { handleMongooseError } from '../utils';
 
 const router = new Router({ prefix: '/conditions' });
 
+/**
+ * This function comment is parsed by doctrine.
+ *
+ * @route GET /conditions/
+ * @group Conditions - Operations about conditions
+ */
 router.get('/', async (ctx) => {
     try {
         ctx.body = await ConditionModel.find();
@@ -15,6 +21,12 @@ router.get('/', async (ctx) => {
     }
 });
 
+/**
+ * This function comment is parsed by doctrine.
+ *
+ * @route POST /conditions/
+ * @group Conditions - Operations about conditions
+ */
 router.post('/', async (ctx) => {
     const { code, description } = ctx.request.body;
 
@@ -27,6 +39,12 @@ router.post('/', async (ctx) => {
     }
 });
 
+/**
+ * This function comment is parsed by doctrine.
+ *
+ * @route POST /conditions/import
+ * @group Conditions - Operations about conditions
+ */
 router.post('/import', async (ctx) => {
     const filePath = path.resolve('./server/data/conditions.csv');
     const conditionsCsv = fs.readFileSync(filePath);

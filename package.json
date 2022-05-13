@@ -17,6 +17,7 @@
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^8.0.8",
     "koa-static": "^5.0.0",
+    "koa-swagger-generator-api": "^1.1.0",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.7",
     "neat-csv": "^5.2.0"

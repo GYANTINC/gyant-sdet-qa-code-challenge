@@ -10,8 +10,9 @@ const router = new Router({ prefix: '/cases' });
 /**
  * This function comment is parsed by doctrine.
  *
- * @route GET /cases/unreviewed/userId
+ * @route GET /cases/unreviewed/{userId}
  * @group Cases - Operations about cases
+ * @param {string} userId.path.required
  */
 router.get('/unreviewed/:userId', async (ctx) => {
     const { userId } = ctx.params;

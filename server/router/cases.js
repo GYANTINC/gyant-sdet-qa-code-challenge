@@ -10,10 +10,8 @@ const router = new Router({ prefix: '/cases' });
 /**
  * This function comment is parsed by doctrine.
  *
- * @route GET /cases/unreviewed/:userId
+ * @route GET /cases/unreviewed/userId
  * @group Cases - Operations about cases
- * @param {string} userId.query.required - User's id.
- * @returns {object} 200 - An array of user's unreviewed cases.
  */
 router.get('/unreviewed/:userId', async (ctx) => {
     const { userId } = ctx.params;
@@ -63,7 +61,7 @@ router.post('/import', async (ctx) => {
  *
  * @route PUT /cases/review
  * @group Cases - Operations about cases
- * @param {object} body.body - Case Review - eg: {"id": "caseId"}.
+ * @param {object} body.body - Case Review - eg: {"id":"caseId","review":{"userId":"userId","conditionId":"62826e230a0aca8ddfff72e8"}}.
  * @returns {object} 200.
  */
 router.put('/review', async (ctx) => {

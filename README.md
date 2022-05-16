@@ -15,30 +15,19 @@ As you can observe, there is no automated test or validation of any kind in this
 ## How to Run With Docker
 ### To Start 
 ```bash
-$ ./start-app.sh
+`./start-app.sh`
 ```
 ### To Stop
 ```bash
-$ docker-compose down
+`docker-compose down`
 ```
-
-## How to Run
-Note: Our suggestion is to use MongoDB Atlas cloud service. 
-
-Steps for Atlas Instance:
-1. Create a Shared Cluster
-2. Add a user
-3. Give permissions to access from anywhere
-
-Steps for [Installation](https://github.com/GYANTINC/gyant-sdet-qa-code-challenge/wiki/Installation)
-
-
 ## API 
 We have two endpoints to import the data to our collections. Check the list with all the endpoints below.
-
+``
 ### API endpoints:
+`http://localhost:3000/api-docs`
 - /cases
-    - GET /unreviewed/:userId
+    - GET /unreviewed/userId
     - POST /import
     - PUT /review
     - DELETE /

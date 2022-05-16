@@ -42,9 +42,11 @@ We have two endpoints to import the data to our collections. Check the list with
     - POST /register
 
 ## Goal
-Define and implement the tests of the types and levels you consider useful/necessary to help us validate the correctness of this piece of software (at a minimum, both integration and e2e tests should be delivered).
+Define and implement the tests of the types and levels you consider useful/necessary to help us validate the correctness of this piece of software (at a minimum, both API and UI tests should be delivered).
 
-The choice of the testing techniques and instruments to employ is also yours (you should naturally take the tech stack of the existing codebase into account). Keep in mind that all the written/implemented tests and validations should be portable (i.e. automatically executable on a local machine, a server, a CI/CD platform, etc.).
+We are expecting the UI tests to be implemented using the Robot Framework tool (Browser or Selenium library) and the API tests to be implemented in Javascript or Typescript.
+
+Keep in mind that all the written/implemented tests and validations should be portable (i.e. automatically executable on a local machine, a server, a CI/CD platform, etc.) and we are expecting the tests to be integrated into a CI platform like TravisCI or Github Actions.
 
 If you wish to, you can suggest or even implement small refactors/tweaks to make the source code more testable. The same is valid for all the bugs you may find.
 

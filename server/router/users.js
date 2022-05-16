@@ -11,7 +11,7 @@ const router = new Router({ prefix: '/users' });
  *
  * @route POST /users/login
  * @group Users - Operations about users
- * @param {object} body.body - Email - eg: {"email": "who@doctor.com","password": "qwerty"}.
+ * @param {object} body.body - Login - eg: {"email": "who@doctor.com","password": "qwerty"}.
  * @returns {object} 200.
  */
 router.post('/login', async (ctx) => {
@@ -45,7 +45,7 @@ router.post('/login', async (ctx) => {
  *
  * @route POST /users/register
  * @group Users - Operations about users
- * @param {object} body.body - Email - eg: {"name": "Doctor Who","email": "who@doctor.com","password": "qwerty"}.
+ * @param {object} body.body - Register - eg: {"name": "Doctor Who","email": "who@doctor.com","password": "qwerty"}.
  * @returns {object} 200.
  */
 router.post('/register', async (ctx) => {

@@ -26,6 +26,8 @@ router.get('/', async (ctx) => {
  *
  * @route POST /conditions/
  * @group Conditions - Operations about conditions
+ * @param {object} body.body - Condition - eg: {"code": "12345","description": "Condition Description"}.
+ * @returns {object} 200.
  */
 router.post('/', async (ctx) => {
     const { code, description } = ctx.request.body;

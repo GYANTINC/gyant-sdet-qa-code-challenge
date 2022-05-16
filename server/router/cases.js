@@ -12,6 +12,8 @@ const router = new Router({ prefix: '/cases' });
  *
  * @route GET /cases/unreviewed/:userId
  * @group Cases - Operations about cases
+ * @param {string} userId.query.required - User's id.
+ * @returns {object} 200 - An array of user's unreviewed cases.
  */
 router.get('/unreviewed/:userId', async (ctx) => {
     const { userId } = ctx.params;
@@ -50,8 +52,10 @@ router.post('/import', async (ctx) => {
     }));
 
     try {
+        console.log('Performing bulk update...');
         ctx.body = await CaseModel.collection.bulkWrite(updates);
     } catch (err) {
+        console.log(err);
         handleMongooseError(err, ctx);
     }
 });
@@ -61,6 +65,8 @@ router.post('/import', async (ctx) => {
  *
  * @route PUT /cases/review
  * @group Cases - Operations about cases
+ * @param {object} body.body - Case Review - eg: {"id": "caseId"}.
+ * @returns {object} 200.
  */
 router.put('/review', async (ctx) => {
     const { id, review } = ctx.request.body;

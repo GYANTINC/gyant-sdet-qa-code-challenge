@@ -52,10 +52,8 @@ router.post('/import', async (ctx) => {
     }));
 
     try {
-        console.log('Performing bulk update...');
         ctx.body = await CaseModel.collection.bulkWrite(updates);
     } catch (err) {
-        console.log(err);
         handleMongooseError(err, ctx);
     }
 });

@@ -41,6 +41,9 @@ We have two endpoints to import the data to our collections. Check the list with
     - POST /login
     - POST /register
 
+### MONGO DB
+`MONGODB_CONNECTION=mongodb://127.0.0.1:27018/test`
+
 ## Goal
 Define and implement the tests of the types and levels you consider useful/necessary to help us validate the correctness of this piece of software (at a minimum, both API and UI tests should be delivered).
 

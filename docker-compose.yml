@@ -3,6 +3,8 @@ services:
   mongodb-sdet-challenge:
     image: mongo:4.2
     container_name: mongodb-sdet-challenge
+    ports:
+      - '27018:27017'
   gyant-sdet-qa-code-challenge-app:
     build: .
     container_name: gyant-sdet-qa-code-challenge-app

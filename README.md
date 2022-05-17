@@ -12,23 +12,22 @@ As you can observe, there is no automated test or validation of any kind in this
 
 # Assignment
 
-## How to Run
-Note: Our suggestion is to use MongoDB Atlas cloud service. 
-
-Steps for Atlas Instance:
-1. Create a Shared Cluster
-2. Add a user
-3. Give permissions to access from anywhere
-
-Steps for [Installation](https://github.com/GYANTINC/gyant-sdet-qa-code-challenge/wiki/Installation)
-
-
+## How to Run With Docker
+### To Start 
+```bash
+`./start-app.sh`
+```
+### To Stop
+```bash
+`docker-compose down`
+```
 ## API 
 We have two endpoints to import the data to our collections. Check the list with all the endpoints below.
-
+``
 ### API endpoints:
+`http://localhost:3000/api-docs`
 - /cases
-    - GET /unreviewed/:userId
+    - GET /unreviewed/userId
     - POST /import
     - PUT /review
     - DELETE /
@@ -42,10 +41,15 @@ We have two endpoints to import the data to our collections. Check the list with
     - POST /login
     - POST /register
 
-## Goal
-Define and implement the tests of the types and levels you consider useful/necessary to help us validate the correctness of this piece of software (at a minimum, both integration and e2e tests should be delivered).
+### MONGO DB
+`MONGODB_CONNECTION=mongodb://127.0.0.1:27018/test`
 
-The choice of the testing techniques and instruments to employ is also yours (you should naturally take the tech stack of the existing codebase into account). Keep in mind that all the written/implemented tests and validations should be portable (i.e. automatically executable on a local machine, a server, a CI/CD platform, etc.).
+## Goal
+Define and implement the tests of the types and levels you consider useful/necessary to help us validate the correctness of this piece of software (at a minimum, both API and UI tests should be delivered).
+
+We are expecting the UI tests to be implemented using the Robot Framework tool (Browser or Selenium library) and the API tests to be implemented in Javascript or Typescript.
+
+Keep in mind that all the written/implemented tests and validations should be portable (i.e. automatically executable on a local machine, a server, a CI/CD platform, etc.) and we are expecting the tests to be integrated into a CI platform like TravisCI or Github Actions.
 
 If you wish to, you can suggest or even implement small refactors/tweaks to make the source code more testable. The same is valid for all the bugs you may find.
 

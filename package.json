@@ -2,7 +2,7 @@
   "name": "gyant-crud",
   "version": "1.0.0",
   "description": "gyant crud challenge",
-  "author": "paulobmarcos",
+  "author": "sdetTeam",
   "main": "./server/index.js",
   "scripts": {
     "start": "node -r esm server",
@@ -10,13 +10,14 @@
   },
   "dependencies": {
     "@hapi/boom": "^9.1.0",
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.1",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^8.0.8",
     "koa-static": "^5.0.0",
+    "koa-swagger-generator-api": "^1.1.0",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.7",
     "neat-csv": "^5.2.0"

@@ -7,6 +7,13 @@ import { handleMongooseError } from '../utils';
 
 const router = new Router({ prefix: '/cases' });
 
+/**
+ * This function comment is parsed by doctrine.
+ *
+ * @route GET /cases/unreviewed/{userId}
+ * @group Cases - Operations about cases
+ * @param {string} userId.path.required
+ */
 router.get('/unreviewed/:userId', async (ctx) => {
     const { userId } = ctx.params;
 
@@ -19,6 +26,12 @@ router.get('/unreviewed/:userId', async (ctx) => {
     }
 });
 
+/**
+ * This function comment is parsed by doctrine.
+ *
+ * @route POST /cases/import
+ * @group Cases - Operations about cases
+ */
 router.post('/import', async (ctx) => {
     const dir = path.resolve('./server/data/cases');
     const fileNames = fs.readdirSync(dir);
@@ -44,6 +57,14 @@ router.post('/import', async (ctx) => {
     }
 });
 
+/**
+ * This function comment is parsed by doctrine.
+ *
+ * @route PUT /cases/review
+ * @group Cases - Operations about cases
+ * @param {object} body.body - Case Review - eg: {"id":"caseId","review":{"userId":"userId","conditionId":"62826e230a0aca8ddfff72e8"}}.
+ * @returns {object} 200.
+ */
 router.put('/review', async (ctx) => {
     const { id, review } = ctx.request.body;
     const { userId, conditionId, date = Date.now() } = review;
@@ -70,6 +91,12 @@ router.put('/review', async (ctx) => {
     }
 });
 
+/**
+ * This function comment is parsed by doctrine.
+ *
+ * @route DELETE /cases/
+ * @group Cases - Operations about cases
+ */
 router.delete('/', async (ctx) => {
     try {
         ctx.body = await CaseModel.collection.drop();

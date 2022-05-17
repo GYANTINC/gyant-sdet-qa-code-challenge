@@ -6,6 +6,14 @@ import { handleMongooseError } from '../utils';
 
 const router = new Router({ prefix: '/users' });
 
+/**
+ * This function comment is parsed by doctrine.
+ *
+ * @route POST /users/login
+ * @group Users - Operations about users
+ * @param {object} body.body - Login - eg: {"email": "who@doctor.com","password": "qwerty"}.
+ * @returns {object} 200.
+ */
 router.post('/login', async (ctx) => {
     const { email, password } = ctx.request.body;
 
@@ -32,6 +40,14 @@ router.post('/login', async (ctx) => {
     }
 });
 
+/**
+ * This function comment is parsed by doctrine.
+ *
+ * @route POST /users/register
+ * @group Users - Operations about users
+ * @param {object} body.body - Register - eg: {"name": "Doctor Who","email": "who@doctor.com","password": "qwerty"}.
+ * @returns {object} 200.
+ */
 router.post('/register', async (ctx) => {
     const { name, email, password } = ctx.request.body;
     const hashPassword = await bcrypt.hash(password, 10);
